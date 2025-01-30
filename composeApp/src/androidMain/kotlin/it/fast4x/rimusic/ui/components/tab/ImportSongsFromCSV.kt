@@ -14,8 +14,6 @@ import it.fast4x.rimusic.enums.PopupType
 import it.fast4x.rimusic.models.Song
 import it.fast4x.rimusic.ui.components.themed.SmartMessage
 import it.fast4x.rimusic.appContext
-import it.fast4x.rimusic.models.Album
-import it.fast4x.rimusic.models.Artist
 import it.fast4x.rimusic.ui.components.tab.toolbar.Descriptive
 import it.fast4x.rimusic.ui.components.tab.toolbar.MenuIcon
 import it.fast4x.rimusic.utils.formatAsDuration
@@ -28,7 +26,7 @@ class ImportSongsFromCSV private constructor(
         private fun openFile(
             uri: Uri,
             beforeTransaction: (Int, Map<String, String>) -> Unit = { _,_ -> },
-            afterTransaction: ( Int, Song, Album, List<Artist> ) -> Unit = { _,_,_,_ -> }
+            afterTransaction: ( Int, Song ) -> Unit = { _,_ -> }
         ) {
             appContext().applicationContext
                         .contentResolver
@@ -56,43 +54,18 @@ class ImportSongsFromCSV private constructor(
                                             thumbnailUrl = row["ThumbnailUrl"] ?: "",
                                             totalPlayTimeMs = 1L
                                         )
-
-                                         val albumId = row["AlbumId"] ?: ""
-                                         val albumTitle = row["AlbumTitle"]
-                                         val album = Album(
-                                            id = albumId,
-                                            title = albumTitle
-                                         )
-
-                                         val artistNames = row["Artists"]?.split(",")
-                                         val artistIds = row["ArtistIds"]?.split(",")
-                                         val artists = mutableListOf<Artist>()
-                                         if (artistIds != null && (artistNames?.size == artistIds.size)) {
-                                            for(idx in artistIds.indices){
-                                                val artistName = artistNames.getOrNull(idx)
-                                                val artistId = artistIds.getOrNull(idx)
-                                                if(artistId!=null){
-                                                    val artist = Artist(
-                                                    id = artistId,
-                                                    name = artistName
-                                                    )
-                                                    artists.add(artist)
-                                                }
-                                            }
-                                         }
-
-                                afterTransaction( index, song, album, artists )
+                                        afterTransaction( index, song )
+                                    }
+                                }
                             }
                         }
-                    }
-                }
         }
 
         @JvmStatic
         @Composable
         fun init(
             beforeTransaction: (Int, Map<String, String>) -> Unit = { _,_ -> },
-            afterTransaction: ( Int, Song, Album, List<Artist> ) -> Unit = { _,_,_,_ -> }
+            afterTransaction: ( Int, Song ) -> Unit = { _,_ -> }
         ) = ImportSongsFromCSV(
             rememberLauncherForActivityResult(
                 ActivityResultContracts.OpenDocument()

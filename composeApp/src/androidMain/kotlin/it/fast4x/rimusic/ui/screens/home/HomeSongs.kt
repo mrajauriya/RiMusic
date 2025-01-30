@@ -272,7 +272,7 @@ fun HomeSongs(
     )
     val shuffle = SongsShuffle.init{ flowOf( getMediaItems() ) }
     val import = ImportSongsFromCSV.init(
-        afterTransaction = { index, song, album, artists ->
+        afterTransaction = { _, song ->
             Database.upsert( song )
             Database.like( song.id, System.currentTimeMillis() )
         }

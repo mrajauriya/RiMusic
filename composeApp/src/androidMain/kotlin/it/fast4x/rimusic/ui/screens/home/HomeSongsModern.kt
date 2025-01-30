@@ -50,7 +50,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -195,8 +194,6 @@ import it.fast4x.rimusic.ui.components.SwipeablePlaylistItem
 import it.fast4x.rimusic.ui.components.themed.CacheSpaceIndicator
 import it.fast4x.rimusic.ui.components.themed.InProgressDialog
 import it.fast4x.rimusic.ui.screens.settings.isYouTubeSyncEnabled
-import it.fast4x.rimusic.utils.asSong
-import it.fast4x.rimusic.utils.formatAsDuration
 import it.fast4x.rimusic.utils.isDownloadedSong
 import it.fast4x.rimusic.utils.isNowPlaying
 import kotlinx.coroutines.withContext
@@ -687,65 +684,42 @@ fun HomeSongsModern(
         mutableStateOf("")
     }
 
-    val coroutineScope = rememberCoroutineScope()
-
     val exportLauncher =
         rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("text/csv")) { uri ->
             if (uri == null) return@rememberLauncherForActivityResult
-            coroutineScope.launch (Dispatchers.IO){
-                context.applicationContext.contentResolver.openOutputStream(uri)
-                    ?.use { outputStream ->
-                        csvWriter().open(outputStream) {
-                            writeRow(
-                                "PlaylistBrowseId",
-                                "PlaylistName",
-                                "MediaId",
-                                "Title",
-                                "Artists",
-                                "Duration",
-                                "ThumbnailUrl",
-                                "AlbumId",
-                                "AlbumTitle",
-                                "ArtistIds"
-                            )
-                            if (listMediaItems.isEmpty()) {
-                                items.forEach {
-                                    val artistInfos = Database.songArtistInfo(it.asMediaItem.mediaId)
-                                    val albumInfo = Database.songAlbumInfo(it.asMediaItem.mediaId)
-                                    writeRow(
-                                        "",
-                                        plistName,
-                                        it.song.id,
-                                        it.song.title,
-                                        artistInfos.joinToString(",") { it.name ?: "" },
-                                        it.song.durationText,
-                                        it.song.thumbnailUrl,
-                                        albumInfo?.id,
-                                        albumInfo?.name,
-                                        artistInfos.joinToString(",") { it.id }
-                                    )
-                                }
-                            } else {
-                                listMediaItems.forEach {
-                                    val artistInfos = Database.songArtistInfo(it.mediaId)
-                                    val albumInfo = Database.songAlbumInfo(it.mediaId)
-                                    writeRow(
-                                        "",
-                                        plistName,
-                                        it.mediaId,
-                                        it.mediaMetadata.title,
-                                        artistInfos.joinToString(",") { it.name ?: "" },
-                                        it.asSong.durationText,
-                                        it.mediaMetadata.artworkUri,
-                                        albumInfo?.id,
-                                        albumInfo?.name,
-                                        artistInfos.joinToString(",") { it.id }
-                                    )
-                                }
+
+            context.applicationContext.contentResolver.openOutputStream(uri)
+                ?.use { outputStream ->
+                    csvWriter().open(outputStream){
+                        writeRow("PlaylistBrowseId", "PlaylistName", "MediaId", "Title", "Artists", "Duration", "ThumbnailUrl")
+                        if (listMediaItems.isEmpty()) {
+                            items.forEach {
+                                writeRow(
+                                    "",
+                                    plistName,
+                                    it.song.id,
+                                    it.song.title,
+                                    it.song.artistsText,
+                                    it.song.durationText,
+                                    it.song.thumbnailUrl
+                                )
+                            }
+                        } else {
+                            listMediaItems.forEach {
+                                writeRow(
+                                    "",
+                                    plistName,
+                                    it.mediaId,
+                                    it.mediaMetadata.title,
+                                    it.mediaMetadata.artist,
+                                    "",
+                                    it.mediaMetadata.artworkUri
+                                )
                             }
                         }
                     }
-            }
+                }
+
         }
 
     var isExporting by rememberSaveable {

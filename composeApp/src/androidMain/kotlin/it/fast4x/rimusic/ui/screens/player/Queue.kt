@@ -51,7 +51,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
@@ -142,11 +141,7 @@ import kotlinx.coroutines.launch
 import it.fast4x.rimusic.colorPalette
 import it.fast4x.rimusic.thumbnailShape
 import it.fast4x.rimusic.typography
-import it.fast4x.rimusic.utils.asMediaItem
-import it.fast4x.rimusic.utils.asSong
 import it.fast4x.rimusic.utils.enqueue
-import it.fast4x.rimusic.utils.formatAsDuration
-import kotlinx.coroutines.Dispatchers
 import java.text.SimpleDateFormat
 import java.util.Date
 
@@ -288,68 +283,51 @@ fun Queue(
             mutableStateOf("")
         }
 
-        val coroutineScope = rememberCoroutineScope()
-
         val exportLauncher =
             rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("text/csv")) { uri ->
                 if (uri == null) return@rememberLauncherForActivityResult
-                coroutineScope.launch (Dispatchers.IO){
-                    context.applicationContext.contentResolver.openOutputStream(uri)
-                        ?.use { outputStream ->
-                            csvWriter().open(outputStream) {
-                                writeRow(
-                                    "PlaylistBrowseId",
-                                    "PlaylistName",
-                                    "MediaId",
-                                    "Title",
-                                    "Artists",
-                                    "Duration",
-                                    "ThumbnailUrl",
-                                    "AlbumId",
-                                    "AlbumTitle",
-                                    "ArtistIds"
-                                )
-                                if (listMediaItems.isEmpty()) {
-                                    windows.forEach {
-                                        val artistInfos = Database.songArtistInfo(it.mediaItem.mediaId)
-                                        val albumInfo = Database.songAlbumInfo(it.mediaItem.mediaId)
-                                        writeRow(
-                                            "",
-                                            plistName,
-                                            it.mediaItem.mediaId,
-                                            it.mediaItem.mediaMetadata.title,
-                                            artistInfos.joinToString(",") { it.name ?: "" },
-                                            it.mediaItem.asSong.durationText,
-                                            it.mediaItem.mediaMetadata.artworkUri,
-                                            albumInfo?.id,
-                                            albumInfo?.name,
-                                            artistInfos.joinToString(",") { it.id }
-                                        )
-                                    }
-                                } else {
-                                    listMediaItems.forEach {
-                                        val artistInfos = Database.songArtistInfo(it.mediaId)
-                                        val albumInfo = Database.songAlbumInfo(it.mediaId)
-                                        writeRow(
-                                            "",
-                                            plistName,
-                                            it.mediaId,
-                                            it.mediaMetadata.title,
-                                            artistInfos.joinToString(",") { it.name ?: "" },
-                                            it.asSong.durationText,
-                                            it.mediaMetadata.artworkUri,
-                                            albumInfo?.id,
-                                            albumInfo?.name,
-                                            artistInfos.joinToString(",") { it.id }
-                                        )
-                                    }
+
+                context.applicationContext.contentResolver.openOutputStream(uri)
+                    ?.use { outputStream ->
+                        csvWriter().open(outputStream) {
+                            writeRow(
+                                "PlaylistBrowseId",
+                                "PlaylistName",
+                                "MediaId",
+                                "Title",
+                                "Artists",
+                                "Duration",
+                                "ThumbnailUrl"
+                            )
+                            if (listMediaItems.isEmpty()) {
+                                windows.forEach {
+                                    writeRow(
+                                        "",
+                                        plistName,
+                                        it.mediaItem.mediaId,
+                                        it.mediaItem.mediaMetadata.title,
+                                        it.mediaItem.mediaMetadata.artist,
+                                        "",
+                                        it.mediaItem.mediaMetadata.artworkUri
+                                    )
+                                }
+                            } else {
+                                listMediaItems.forEach {
+                                    writeRow(
+                                        "",
+                                        plistName,
+                                        it.mediaId,
+                                        it.mediaMetadata.title,
+                                        it.mediaMetadata.artist,
+                                        "",
+                                        it.mediaMetadata.artworkUri
+                                    )
                                 }
                             }
                         }
-                }
+                    }
+
             }
-
-
 
         var isExporting by rememberSaveable {
             mutableStateOf(false)
