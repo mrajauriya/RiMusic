@@ -581,7 +581,7 @@
     <string name="info_prevent_play_songs_with_age_limitation">Запобігти відтворення пісень з обмеженням віку</string>
     <string name="cache_location_private">Приватний</string>
     <string name="cache_location_system">Система</string>
-    <string name="info_cannot_rename_a_monthly_or_piped_playlist">Не вдається перейменувати місячний або piped плейлист</string>
+    <string name="info_cannot_rename_a_monthly_or_piped_playlist">Неможливо перейменувати щомісячний, вподобаний або Piped плейлист</string>
     <string name="debug">НАЛАГОДЖЕННЯ</string>
     <string name="enable_log_debug">Увімкнути налагодження журналу</string>
     <string name="if_enabled_create_a_log_file_to_highlight_errors">Якщо увімкнено, створіть файл журналу щоб виділити помилки</string>
@@ -712,7 +712,7 @@
     <string name="format_ms">%1$s мс</string>
     <string name="minimum_silence_length">Мінімальна тривалість тиші</string>
     <string name="minimum_silence_length_description">Мінімальний час тиші в треку, після якого він буде переключений</string>
-    <string name="minimum_silence_length_warning">Щоб зміни набули чинності, необхідно перезапустити програвач!</string>
+    <string name="minimum_silence_length_warning">Щоб зміни набули чинності, необхідно перезапустити плеєр!</string>
     <string name="restart_service">Перезапустити плеєр</string>
     <string name="player_pause_listen_history">Призупинити історію прослуховування</string>
     <string name="queuetype">Тип черги</string>
@@ -953,8 +953,8 @@
     <string name="midnightodyssey">Опівнічна Одіссея</string>
     <string name="circle">Коло</string>
     <string name="enter_hex">Введіть 7-значний HEX-код</string>
-    <string name="streaming_player_type_default">Default</string>
-    <string name="streaming_player_type_next">Next</string>
-    <string name="streaming_player_type">Streaming player type</string>
-    <string name="streaming_player_type_advanced">Advanced</string>
+    <string name="streaming_player_type_default">За замовчуванням</string>
+    <string name="streaming_player_type_next">Наступний</string>
+    <string name="streaming_player_type">Тип потокового плеєра</string>
+    <string name="streaming_player_type_advanced">Розширені налаштування</string>
 </resources>
