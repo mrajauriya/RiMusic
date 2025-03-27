@@ -582,7 +582,7 @@
     <string name="info_prevent_play_songs_with_age_limitation">Запретить воспроизведение песен с ограничением возраста</string>
     <string name="cache_location_private">Внутри файлов приложения</string>
     <string name="cache_location_system">Стандартное (внутри системы)</string>
-    <string name="info_cannot_rename_a_monthly_or_piped_playlist">Вы не можете изменять названия ежемесячных, онлайн, YTM понравившихся или переданных плейлистов</string>
+    <string name="info_cannot_rename_a_monthly_or_piped_playlist">Невозможно переименовать ежемесячный или Piped плейлист</string>
     <string name="debug">ОТЛАДКА</string>
     <string name="enable_log_debug">Включить отладку логов</string>
     <string name="if_enabled_create_a_log_file_to_highlight_errors">Если включено, создается файл логов для выявления ошибок</string>
@@ -955,4 +955,8 @@
     <string name="midnightodyssey">Полуночная Одиссея</string>
     <string name="circle">Круг</string>
     <string name="enter_hex">Введите 7-значный HEX-код</string>
+    <string name="streaming_player_type_default">Default</string>
+    <string name="streaming_player_type_next">Next</string>
+    <string name="streaming_player_type">Streaming player type</string>
+    <string name="streaming_player_type_advanced">Advanced</string>
 </resources>
