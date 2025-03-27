@@ -581,7 +581,7 @@
     <string name="info_prevent_play_songs_with_age_limitation">Yaş sınırlaması olan şarkıların oynatılmasını engelle</string>
     <string name="cache_location_private">Özel</string>
     <string name="cache_location_system">Sistem</string>
-    <string name="info_cannot_rename_a_monthly_or_piped_playlist">Aylık veya çevrimiçi veya piped çalma listesi yeniden adlandırılamıyor</string>
+    <string name="info_cannot_rename_a_monthly_or_piped_playlist">Aylık, çevrimiçi, YTM beğenilenler veya piped çalma listeleri yeniden adlandırılamaz</string>
     <string name="debug">DEBUG</string>
     <string name="enable_log_debug">Hata ayıklama günlüğünü etkinleştir</string>
     <string name="if_enabled_create_a_log_file_to_highlight_errors">Etkinleştirilmişse, hataları vurgulamak için bir günlük dosyası oluştur</string>
@@ -953,8 +953,8 @@
     <string name="midnightodyssey">Geceyarısı Destanı</string>
     <string name="circle">Çember</string>
     <string name="enter_hex">7 haneli HEX kodunu girin</string>
-    <string name="streaming_player_type_default">Default</string>
-    <string name="streaming_player_type_next">Next</string>
-    <string name="streaming_player_type">Streaming player type</string>
-    <string name="streaming_player_type_advanced">Advanced</string>
+    <string name="streaming_player_type_default">Varsayılan</string>
+    <string name="streaming_player_type_next">Sonraki</string>
+    <string name="streaming_player_type">Akış oynatıcı tipi</string>
+    <string name="streaming_player_type_advanced">Gelişmiş</string>
 </resources>
