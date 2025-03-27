@@ -390,7 +390,7 @@
     <string name="export_playlist">プレイリストのエクスポート</string>
     <string name="lang_afrikaans">アフリカーンス語</string>
     <string name="playlist_top">上位の再生リスト</string>
-    <string name="my_playlist_top">再生上位 %s</string>
+    <string name="my_playlist_top">My Top</string>
     <string name="navigation_bar_position">ナビゲーションバーの位置</string>
     <string name="direction_left">左</string>
     <string name="direction_right">右</string>
@@ -953,4 +953,8 @@
     <string name="midnightodyssey">Midnight Odyssey</string>
     <string name="circle">Circle</string>
     <string name="enter_hex">Enter the 7-digit HEX code</string>
+    <string name="streaming_player_type_default">Default</string>
+    <string name="streaming_player_type_next">Next</string>
+    <string name="streaming_player_type">Streaming player type</string>
+    <string name="streaming_player_type_advanced">Advanced</string>
 </resources>
