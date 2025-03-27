@@ -581,7 +581,7 @@
     <string name="info_prevent_play_songs_with_age_limitation">Evitar reproducir canciones con límite de edad</string>
     <string name="cache_location_private">Privado</string>
     <string name="cache_location_system">Sistema</string>
-    <string name="info_cannot_rename_a_monthly_or_piped_playlist">Cannot rename a monthly, online, YTM Liked or piped playlist</string>
+    <string name="info_cannot_rename_a_monthly_or_piped_playlist">No se puede renombrar una lista de reproducción mensual, en línea o Piped</string>
     <string name="debug">DEPURACIÓN</string>
     <string name="enable_log_debug">Habilitar registro de depuración</string>
     <string name="if_enabled_create_a_log_file_to_highlight_errors">Si está habilitado, crea un archivo de registro para resaltar errores</string>
@@ -953,4 +953,8 @@
     <string name="midnightodyssey">Midnight Odyssey</string>
     <string name="circle">Círculo</string>
     <string name="enter_hex">Introduzca el código HEX de 7 dígitos</string>
+    <string name="streaming_player_type_default">Default</string>
+    <string name="streaming_player_type_next">Next</string>
+    <string name="streaming_player_type">Streaming player type</string>
+    <string name="streaming_player_type_advanced">Advanced</string>
 </resources>
