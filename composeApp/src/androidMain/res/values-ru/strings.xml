@@ -956,7 +956,7 @@
     <string name="circle">Круг</string>
     <string name="enter_hex">Введите 7-значный HEX-код</string>
     <string name="streaming_player_type_default">По умолчанию</string>
-    <string name="streaming_player_type_next">Next</string>
-    <string name="streaming_player_type">Streaming player type</string>
+    <string name="streaming_player_type_next">Следующий</string>
+    <string name="streaming_player_type">Тип потокового плеера</string>
     <string name="streaming_player_type_advanced">Расширенные настройки</string>
 </resources>
