@@ -581,7 +581,7 @@
     <string name="info_prevent_play_songs_with_age_limitation">Спречите пуштање песама са старосним ограничењем</string>
     <string name="cache_location_private">Приватнa</string>
     <string name="cache_location_system">Систем</string>
-    <string name="info_cannot_rename_a_monthly_or_piped_playlist">Cannot rename a monthly, online, YTM Liked or piped playlist</string>
+    <string name="info_cannot_rename_a_monthly_or_piped_playlist">Није могуће преименовати месечну, онлајн или пипед листу за репродукцију</string>
     <string name="debug">ОТКЛАЊАЊЕ ГРЕШАКА</string>
     <string name="enable_log_debug">Омогући запис отклањања грешака</string>
     <string name="if_enabled_create_a_log_file_to_highlight_errors">Ако је омогућено, креирајте датотеку записа да бисте истакли грешке</string>
@@ -953,4 +953,8 @@
     <string name="midnightodyssey">Поноћна Одисеја</string>
     <string name="circle">Круг</string>
     <string name="enter_hex">Унесите 7-цифрени ХЕКС код</string>
+    <string name="streaming_player_type_default">Default</string>
+    <string name="streaming_player_type_next">Next</string>
+    <string name="streaming_player_type">Streaming player type</string>
+    <string name="streaming_player_type_advanced">Advanced</string>
 </resources>
