@@ -956,4 +956,8 @@ Volume BAS : titre précédent</string>
     <string name="midnightodyssey">Odyssée de Minuit</string>
     <string name="circle">Cercle</string>
     <string name="enter_hex">Entrer le code HEX à 7 chiffres</string>
+    <string name="streaming_player_type_default">Default</string>
+    <string name="streaming_player_type_next">Next</string>
+    <string name="streaming_player_type">Streaming player type</string>
+    <string name="streaming_player_type_advanced">Advanced</string>
 </resources>
