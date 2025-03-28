@@ -948,10 +948,10 @@
     <string name="info_aternative_dns_server">Pokud máte problémy s načítáním, můžete použít alternativní dns server</string>
     <string name="use_alternative_dns">Použít alternativní dns</string>
     <string name="use_dns_over_https_title">Použít dns přes https</string>
-    <string name="also_delete_playback_data">Also delete playback data</string>
+    <string name="also_delete_playback_data">Vymazat také data přehrávání</string>
     <string name="rescue_center">Záchranné centrum</string>
-    <string name="midnightodyssey">Midnight Odyssey</string>
-    <string name="circle">Circle</string>
+    <string name="midnightodyssey">Půlnoční odysea</string>
+    <string name="circle">Kruh</string>
     <string name="enter_hex">Zadejte 7místný HEX kód</string>
     <string name="streaming_player_type_default">Výchozí</string>
     <string name="streaming_player_type_next">Další</string>
