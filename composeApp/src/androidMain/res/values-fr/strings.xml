@@ -957,7 +957,7 @@ Volume BAS : titre précédent</string>
     <string name="circle">Cercle</string>
     <string name="enter_hex">Entrer le code HEX à 7 chiffres</string>
     <string name="streaming_player_type_default">Défaut</string>
-    <string name="streaming_player_type_next">Next</string>
-    <string name="streaming_player_type">Streaming player type</string>
-    <string name="streaming_player_type_advanced">Advanced</string>
+    <string name="streaming_player_type_next">Suivant</string>
+    <string name="streaming_player_type">Type de lecteur de streaming</string>
+    <string name="streaming_player_type_advanced">Avancé</string>
 </resources>
