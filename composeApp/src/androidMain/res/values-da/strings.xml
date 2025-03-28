@@ -225,7 +225,7 @@
     <string name="listen_on_piped">Lyt på Piped</string>
     <string name="listen_on_invidious">Lyt på Invidious</string>
     <string name="disable_horizontal_swipe">Deaktivér vandret stryg</string>
-    <string name="disable_vertical_swipe">Deaktiver sangskift via lodret swipe</string>
+    <string name="disable_vertical_swipe">Deaktivér sangskift via lodret stryg</string>
     <string name="disable_vertical_swipe_secondary">Virker kun, når Udvidet Afspiller er slået fra</string>
     <string name="disable_song_switching_via_swipe">Deaktivér sangskift via stryg</string>
     <string name="interface_in_use">Grænseflade i brug</string>
