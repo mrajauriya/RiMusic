@@ -23,7 +23,7 @@
     <string name="enter_the_playlist_name">Indtast playlistens navn</string>
     <string name="playlists">Playlister</string>
     <string name="favorites">Favoritter</string>
-    <string name="disliked">Syntes ikke om</string>
+    <string name="disliked">Kan ikke lide</string>
     <string name="quick_picks">Hurtige valg</string>
     <string name="songs">Sange</string>
     <string name="other_versions">Andre versioner</string>
@@ -557,7 +557,7 @@
     <string name="position_bottom">Nederst</string>
     <string name="added_to_favorites">Føjet til favoritter</string>
     <string name="removed_from_favorites">Fjernet fra favoritter</string>
-    <string name="added_to_disliked">Føjet til syntes ikke om</string>
+    <string name="added_to_disliked">Føjet til \'Kan ikke lide\'</string>
     <string name="lang_filipino">Filippinsk</string>
     <string name="action_bar_transparent_background">Gennemsigtig baggrund</string>
     <string name="pinfo_type">Infotype</string>
@@ -831,12 +831,12 @@
     <string name="notification_type">Notifikationstype</string>
     <string name="notification_type_default">Standard</string>
     <string name="notification_type_advanced">Avanceret</string>
-    <string name="notification_type_info">Den måde, afspilleren håndteres i meddelelsesområdet og på låseskærmen.</string>
+    <string name="notification_type_info">Den måde, afspilleren håndteres i notifikationsområdet og på låseskærmen.</string>
     <string name="action_bar_show_start_radio_button">Start radio-knap</string>
     <string name="tab_accounts">Konti</string>
     <string name="blankspace">Tom plads i toppen</string>
-    <string name="settings_enable_autodownload_song">Aktivér auto-download af sange</string>
-    <string name="settings_enable_autodownload_song_when_liked">Auto-hent sang, når syntes godt om</string>
+    <string name="settings_enable_autodownload_song">Aktivér auto-hentning af sange</string>
+    <string name="settings_enable_autodownload_song_when_liked">Auto-hent sang ved \'Kan lide\'</string>
     <string name="settings_enable_autodownload_song_when_album_bookmarked">Auto-hent sang, når album bogmærkes</string>
     <string name="tab_general">Generelt</string>
     <string name="queue_and_local_playlists_left_swipe">Venstre stryg for kø og lokale playlister</string>
@@ -876,10 +876,10 @@
     <string name="info_enable_connection_metered">Databesparelse forringer kvaliteten. Brug kun, hvis du har en forbindelse med begrænset data</string>
     <string name="use_ytm_login_only_for_browse">Brug kun YTM-login til at browse</string>
     <string name="info_use_ytm_login_only_for_browse">Bruges, hvis sangene ikke afspilles, når du er logget ind</string>
-    <string name="disliked_this_song">Kan ikke udføre denne handling med \'syntes ikke om\'-sange</string>
-    <string name="removed_from_disliked">Fjernet fra Syntes ikke om</string>
+    <string name="disliked_this_song">Kan ikke udføre denne handling med \'Kan ikke lide\'-sange</string>
+    <string name="removed_from_disliked">Fjernet fra \'Kan ikke lide\'</string>
     <string name="disliked_this_collection">Cannot Perform this Action when all the Songs are Disliked</string>
-    <string name="toggle_controls_landscape">Slå kontroller på skærmen til/fra</string>
+    <string name="toggle_controls_landscape">Slå kontrolelementer på skærm til/fra</string>
     <string name="delete_songs_not_in_library">Slet sange, der ikke er i biblioteket</string>
     <string name="delete_in_process">Sletter sangene, der ikke er i dit bibliotek. Appen lukker, når processen er overstået</string>
     <string name="nothing_to_delete">Intet at slette</string>
@@ -923,13 +923,13 @@
     <string name="add_rimusic_to_ytm_favorites">Like RiMusic\'s \'Kan lide\'-sange på Youtube</string>
     <string name="do_you_really_want_to_like_all_rimusictoytmusic">(Estimeret tid) er påkrævet for at like alle sangene. Denne handling kan ikke genoptages, hvis den afbrydes. Du skal lukke appen for at annullere processen. Vil du fortsætte?</string>
     <string name="do_you_really_want_to_like_all">(Estimeret tid) er påkrævet for at like alle sangene. Du skal lukke appen for at annullere processen. Vil du fortsætte?</string>
-    <string name="songs_liked_yt_failed">Kunne ikke like sangen på YouTube</string>
-    <string name="songs_unliked_yt_failed">Kunne ikke fjerne like fra sangen på YouTube</string>
+    <string name="songs_liked_yt_failed">Kunne ikke give \'Kan lide\' på sangen i YouTube</string>
+    <string name="songs_unliked_yt_failed">Kunne ikke fjerne \'Kan lide\' fra sangen i YouTube</string>
     <string name="adding_yt_to_pl_failed">Der opstod en fejl for de næste 50 sange. Sange føjes til playlisten én ad gangen</string>
     <string name="songs_add_yt_success">Tilføjet sangen i YouTube-playlisten</string>
     <string name="songs_add_yt_failed">Kunne ikke tilføje sangen i YouTube-playlisten</string>
     <string name="viewType">Skift visningstype</string>
-    <string name="copy_translated_lyrics">Kopiér oversatte sangtekster</string>
+    <string name="copy_translated_lyrics">Kopiér oversat sangtekst</string>
     <string name="description">Beskrivelse</string>
     <string name="numbers">Tal</string>
     <string name="subscribers">Abonnenter</string>
@@ -955,6 +955,6 @@
     <string name="enter_hex">Indtast den 7-cifrede HEX-kode</string>
     <string name="streaming_player_type_default">Standard</string>
     <string name="streaming_player_type_next">Næste</string>
-    <string name="streaming_player_type">Type af streamingafspiller</string>
+    <string name="streaming_player_type">Streamingafspillertype</string>
     <string name="streaming_player_type_advanced">Avanceret</string>
 </resources>
