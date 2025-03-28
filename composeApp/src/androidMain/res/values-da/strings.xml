@@ -477,7 +477,7 @@
     <string name="show_actions_bar">Vis handlingslinje</string>
     <string name="transition_effect">Overgangseffekt</string>
     <string name="te_expand">Udvid</string>
-    <string name="te_fade">Fade</string>
+    <string name="te_fade">Udton</string>
     <string name="te_scale">Skalere</string>
     <string name="te_slide_vertical">Glide Lodret</string>
     <string name="te_slide_horizontal">Glide Vandret</string>
