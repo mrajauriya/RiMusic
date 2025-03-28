@@ -950,7 +950,7 @@
     <string name="use_dns_over_https_title">Utilizar DNS mediante HTTPS</string>
     <string name="also_delete_playback_data">Eliminar también los datos de reproducción</string>
     <string name="rescue_center">Centro de rescate</string>
-    <string name="midnightodyssey">Midnight Odyssey</string>
+    <string name="midnightodyssey"></string>
     <string name="circle">Círculo</string>
     <string name="enter_hex">Introduzca el código HEX de 7 dígitos</string>
     <string name="streaming_player_type_default">Default</string>
