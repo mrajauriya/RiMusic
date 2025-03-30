@@ -953,8 +953,8 @@
     <string name="midnightodyssey">Поноћна Одисеја</string>
     <string name="circle">Круг</string>
     <string name="enter_hex">Унесите 7-цифрени ХЕКС код</string>
-    <string name="streaming_player_type_default">Default</string>
-    <string name="streaming_player_type_next">Next</string>
-    <string name="streaming_player_type">Streaming player type</string>
-    <string name="streaming_player_type_advanced">Advanced</string>
+    <string name="streaming_player_type_default">Подразумеван</string>
+    <string name="streaming_player_type_next">Следећи</string>
+    <string name="streaming_player_type">Тип плејера за стримовање</string>
+    <string name="streaming_player_type_advanced">Напредан</string>
 </resources>
