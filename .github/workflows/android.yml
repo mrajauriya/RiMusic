@@ -24,11 +24,8 @@ jobs:
       - name: Build Debug APK
         run: ./gradlew composeApp:assembleDebug
 
-      - name: Verify APK exists
-        run: ls -lh composeApp/build/outputs/apk/debug/
-
-      - name: Upload Debug APK artifact
+      - name: Upload all APKs
         uses: actions/upload-artifact@v4
         with:
-          name: composeApp-debug.apk
-          path: composeApp/build/outputs/apk/debug/composeApp-debug.apk
+         name: all-apks
+         path: '**/build/outputs/apk/**/*.apk'
